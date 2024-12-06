@@ -1,0 +1,90 @@
+/* 50
+f9f6f3
+100
+f2eae2
+200
+e3d3c5
+300
+d1b6a0
+400
+c49e85
+500
+b17c5e
+600
+a36a53
+700
+885546
+800
+6f473d
+900
+5a3c34
+950
+301e1a */
+
+.recipes {
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #301e1a;
+}
+
+.recipes h3 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+
+.recipes-list {
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  overflow-x: scroll;
+}
+
+.recipes-list::-webkit-scrollbar {
+  display: none;
+}
+
+.recipes-list-item {
+  width: 100%;
+  text-align: center;
+}
+
+.recipes-list-item img {
+  height: 6.25rem;
+  width: 6.25rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.recipes-list-item p {
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin-top: 5px;
+  transition: all 0.4s linear;
+  cursor: pointer;
+}
+
+.recipes-list-item:hover {
+  color: #b17c5e;
+}
+
+.recipes-list-item img:hover {
+  border: solid 1px #c49e85;
+}
+
+.recipes-list hr {
+  margin-top: 1rem;
+  height: 1px;
+  background-color: #6f473d;
+  border: none;
+}
+
+.recipes-list-item .active {
+  border: solid 1px #c49e85;
+  padding: 1px;
+}

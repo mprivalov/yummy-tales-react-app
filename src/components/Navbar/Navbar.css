@@ -1,0 +1,123 @@
+/* 50
+f9f6f3
+100
+f2eae2
+200
+e3d3c5
+300
+d1b6a0
+400
+c49e85
+500
+b17c5e
+600
+a36a53
+700
+885546
+800
+6f473d
+900
+5a3c34
+950
+301e1a */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 1% 5%;
+  background-color: #f9f6f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.navbar .logo-container {
+  display: block;
+  height: 1.5rem;
+}
+
+.logo-container .logo-img {
+  height: 1.5rem;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 20px;
+  color: #f9f6f3;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #a36a53;
+  transition: 2s;
+}
+
+.navbar .signin {
+  display: block;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ffffff;
+  border-radius: 1rem;
+  background-color: #a36a53;
+  color: #f9f6f3;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.4s linear;
+}
+
+.navbar .signin:hover {
+  border: 1px solid #a36a53;
+  background-color: #5a3c34;
+}
+
+.active {
+  text-decoration: 2px line-through #f9f6f3;
+}
+
+.navbar a {
+  cursor: pointer;
+  transition: 0.4s linear;
+}
+
+.navbar a:hover {
+  color: #5a3c34;
+}
+
+.navbar-end {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bag-shopping {
+  position: relative;
+  margin: 0 1rem;
+}
+
+.bag-shopping .bag-icon {
+  height: 25px;
+  color: #a36a53;
+  cursor: pointer;
+  transition: 0.4s linear;
+}
+
+.bag-shopping .bag-icon:hover {
+  color: #5a3c34;
+}
+
+.bag-shopping .dot {
+  position: absolute;
+  min-height: 5px;
+  min-width: 5px;
+  background-color: green;
+  border-radius: 5px;
+  top: -4px;
+  right: -4px;
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  .navbar-menu {
+    display: none;
+  }
+}

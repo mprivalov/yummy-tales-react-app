@@ -1,0 +1,51 @@
+.header {
+  height: 100vh;
+  width: 100vw;
+  background: url("/herosection-image.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header .header-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content h1 {
+  font-size: 9vw;
+  color: #f2eae2;
+  text-transform: capitalize;
+  text-shadow: 0px 1px 4px #000000;
+}
+
+.header-content h4 {
+  font-size: 1.5vw;
+  color: #f2eae2;
+  text-transform: capitalize;
+  text-shadow: 0px 1px 2px #000000;
+
+}
+
+.header-content button {
+  display: block;
+  padding: 10px 15px;
+  margin: 30px;
+  border: 2px solid #f9f6f3;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #f9f6f3;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: .4s linear;
+}
+
+.header-content button:hover {
+  border-color: #a36a53;
+  background-color: #f9f6f3;
+  color: #a36a53;
+}

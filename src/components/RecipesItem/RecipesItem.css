@@ -1,0 +1,96 @@
+.recipes-item {
+  width: 100%;
+  margin: auto;
+  border-radius: 1rem 1rem 1rem 0;
+  box-shadow: 0px 0px 15px  #878787;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.recipes-item:hover {
+  border: 1px solid #301e1a;
+  transition: 2s linear;
+}
+
+.recipes-item-img-container {
+  position: relative;
+}
+
+.recipes-item-img-container .add-to-cart {
+  position: absolute;
+  color: #f9f6f3;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  padding: 1rem;
+  background-color: #6f473d;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.recipes-item-img-container .add-to-cart:hover {
+  color: #6f473d;
+  background-color: #f9f6f3;
+}
+
+.recipes-item-counter {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #f9f6f3;
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+
+.item-count {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.recipes-item-counter .add {
+  background-color: #6f473d;
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.recipes-item-counter .substract {
+  background-color: #6f473d;
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.recipes-item-counter .add:hover {
+  color: #6f473d;
+  background-color: #f9f6f3;
+}
+
+.recipes-item-counter .substract:hover {
+  color: #6f473d;
+  background-color: #f9f6f3;
+}
+
+.recipes-item-img {
+  width: 100%;
+  max-height: 16rem;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.recipes-item-info {
+  padding: 1rem;
+}
+
+.recipes-item-name {
+  font-size: large;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+.recipes-item-desc {
+  font-size: 0.8rem;
+  color: #6f473d;
+}
