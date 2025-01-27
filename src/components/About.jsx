@@ -1,5 +1,5 @@
 import React from "react";
-import { marijaImage1, marijaImage2 } from "../assets/assets.js";
+import { marijaImage3 } from "../assets/assets.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
@@ -26,13 +26,19 @@ const About = () => {
           temporibus natus, adipisci labore incidunt quae aspernatur.
         </p>
         <div className="social-media-sec">
-          <FontAwesomeIcon className="icon-sec" icon={faInstagram} />
-          <FontAwesomeIcon className="icon-sec" icon={faTelegram} />
-          <FontAwesomeIcon className="icon-sec" icon={faLinkedin} />
+          <a>
+            <FontAwesomeIcon className="icon-sec" icon={faInstagram} />
+          </a>
+          <a>
+            <FontAwesomeIcon className="icon-sec" icon={faTelegram} />
+          </a>
+          <a>
+            <FontAwesomeIcon className="icon-sec" icon={faLinkedin} />
+          </a>
         </div>
       </div>
       <div className="photo">
-        <img src={marijaImage1} alt="marija-image" />
+        <img src={marijaImage3} alt="marija-image" />
       </div>
     </div>
   );

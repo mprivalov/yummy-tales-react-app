@@ -8,7 +8,7 @@ const RecipesDisplay = ({ category }) => {
 
   return (
     <div className="recipes-display" id="recipes-display">
-      <h2>best recipes in that category</h2>
+      <h4>best recipes in that category</h4>
       <div className="recipes-display-list">
         {recipes_list.map((item, index) => {
           if ((category === "All" || category === item.category)) {

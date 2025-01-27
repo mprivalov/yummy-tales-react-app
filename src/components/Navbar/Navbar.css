@@ -19,16 +19,22 @@ a36a53
 900
 5a3c34
 950
-301e1a */
+301e1a 
+
+h1 - 9rem
+h2 - 7rem
+h3 - 5rem
+h4 - 2rem
+*/
 
 .navbar {
-  position: fixed;
-  width: 100%;
-  padding: 1% 5%;
-  background-color: #f9f6f3;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  padding: 1rem 5vw;
+  background-color: #f9f6f3;
   z-index: 1;
 }
 
@@ -43,35 +49,43 @@ a36a53
 
 .navbar-menu {
   display: flex;
-  gap: 20px;
-  color: #f9f6f3;
-  text-transform: uppercase;
-  font-size: 0.8rem;
+  gap: 1.5rem;
   color: #a36a53;
-  transition: 2s;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.mobile-navbar-menu {
+  display: none;
 }
 
 .navbar .signin {
   display: block;
-  padding: 0.6rem 1rem;
-  border: 1px solid #ffffff;
-  border-radius: 1rem;
-  background-color: #a36a53;
+  padding: 0.7rem 1rem;
+  border-radius: 1.5rem;
+  border: none;
+  background-color: #5a3c34;
   color: #f9f6f3;
   text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-weight: 700;
+  letter-spacing: 2px;
   cursor: pointer;
-  transition: 0.4s linear;
+  transition: all 0.4s ease;
+}
+
+.navbar .signin:focus {
+  background-color: #301e1a;
+  scale: 1.1;
 }
 
 .navbar .signin:hover {
-  border: 1px solid #a36a53;
-  background-color: #5a3c34;
+  background-color: #a36a53;
+  scale: 1.1;
 }
 
 .active {
-  text-decoration: 2px line-through #f9f6f3;
+  color: #5a3c34;
+  border-bottom: 1px solid #5a3c34;
 }
 
 .navbar a {
@@ -86,23 +100,28 @@ a36a53
 .navbar-end {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .bag-shopping {
   position: relative;
-  margin: 0 1rem;
 }
 
 .bag-shopping .bag-icon {
-  height: 25px;
-  color: #a36a53;
+  height: 1.5rem;
+  color: #5a3c34;
   cursor: pointer;
-  transition: 0.4s linear;
+  transition: all 0.4s ease;
+}
+
+.bag-shopping .bag-icon:focus {
+  color: #301e1a;
+  scale: 1.1;
 }
 
 .bag-shopping .bag-icon:hover {
-  color: #5a3c34;
+  color: #a36a53;
+  scale: 1.1;
 }
 
 .bag-shopping .dot {
@@ -116,8 +135,77 @@ a36a53
   cursor: pointer;
 }
 
-@media (max-width: 750px) {
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 5vw;
+  }
+
   .navbar-menu {
     display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-navbar-menu.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    width: 100vw;
+    padding: 1rem;
+    background-color: #f9f6f3;
+    color: #a36a53;
+    font-size: 1rem;
+    text-transform: uppercase;
+    animation: slide-in .4s ease;
+    z-index: 1;
+  }
+
+  .hamburger .bars {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: #5a3c34;
+    cursor: pointer;
+    animation: spinRotate 0.5s;
+    transition: all 0.4s ease;
+  }
+
+  .hamburger .xMark {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: #5a3c34;
+    cursor: pointer;
+    animation: spinRotate 0.5s;
+    transition: all 0.4s ease;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .bars:focus {
+    color: #301e1a;
+  }
+
+  .xMark:focus {
+    color: #301e1a;
+  }
+
+  .bars:hover {
+    color: #a36a53;
+  }
+
+  .xMark:hover {
+    color: #a36a53;
   }
 }

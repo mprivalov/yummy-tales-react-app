@@ -7,8 +7,7 @@ import pizzaImage from "./pizzaImage.webp";
 import mainDishImage from "./mainDishImage.webp";
 import dessertImage from "./dessertImage.jpg";
 
-export { default as marijaImage1 } from "./marija-1.jpg";
-export { default as marijaImage2 } from "./marija-2.jpg";
+export { default as marijaImage3 } from "./marija-3.jpg";
 
 const assets = {
   breakfastImage,

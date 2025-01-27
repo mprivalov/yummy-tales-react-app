@@ -1,9 +1,9 @@
 .login-popup {
-  position: absolute;
+  position: fixed;
   z-index: 2;
   width: 100%;
   height: 100%;
-  background-color: #ffffff6b;
+  background-color: #c1c1c18b;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,7 +55,7 @@
   justify-content: center;
   padding: 0.6rem 1rem;
   border-radius: 1rem;
-  background-color: #a36a53;
+  background-color: #5a3c34;
   color: #f9f6f3;
   text-transform: uppercase;
   font-weight: 600;
@@ -65,22 +65,27 @@
 }
 
 .login-popup-container button:hover {
-  background-color: #5a3c34;
+  background-color: #a36a53;
 }
 
 .login-popup-condition {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: -0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  margin-top: -0.5rem;
 }
 
-.login-popup-condition input { 
-    border: none;
-    outline: none;
+.login-popup-condition input {
+  border: none;
+  outline: none;
 }
 
 .login-popup p span {
-    color: #5a3c34;
-    font-weight: 500;
-    cursor: pointer;
+  color: #5a3c34;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.login-popup p span:hover {
+  color: #a36a53;
 }

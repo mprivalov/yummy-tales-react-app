@@ -1,4 +1,30 @@
+/* 50
+f9f6f3
+100
+f2eae2
+200
+e3d3c5
+300
+d1b6a0
+400
+c49e85
+500
+b17c5e
+600
+a36a53
+700
+885546
+800
+6f473d
+900
+5a3c34
+950
+301e1a */
+
 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100vw;
   background: url("/herosection-image.jpg") no-repeat;
@@ -7,45 +33,67 @@
 }
 
 .header .header-content {
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 .header-content h1 {
-  font-size: 9vw;
+  font-size: 9rem;
   color: #f2eae2;
   text-transform: capitalize;
   text-shadow: 0px 1px 4px #000000;
 }
 
 .header-content h4 {
-  font-size: 1.5vw;
-  color: #f2eae2;
+  font-size: 2rem;
+  color: #e3d3c5;
   text-transform: capitalize;
   text-shadow: 0px 1px 2px #000000;
-
 }
 
 .header-content button {
   display: block;
-  padding: 10px 15px;
-  margin: 30px;
-  border: 2px solid #f9f6f3;
-  border-radius: 20px;
+  padding: 0.7rem 1rem;
+  margin: 2rem;
+  border: 1px solid #f9f6f3;
+  border-radius: 1.5rem;
   background-color: transparent;
   color: #f9f6f3;
   text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-weight: 700;
+  letter-spacing: 2px;
   cursor: pointer;
-  transition: .4s linear;
+  transition: all .4s ease;
+}
+
+.header-content button:focus {
+  border-color: #a36a53;
+  background-color: #b17c5e;
+  color: #301e1a;
 }
 
 .header-content button:hover {
   border-color: #a36a53;
   background-color: #f9f6f3;
   color: #a36a53;
+}
+
+@media (max-width: 1024px) {
+  .header-content h1 {
+    font-size: 7rem;
+  }
+
+  .header-content h4 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 5rem;
+  }
+
+  .header-content h4 {
+    font-size: 1.2rem;
+  }
 }

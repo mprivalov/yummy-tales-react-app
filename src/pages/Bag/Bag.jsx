@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import "./Bag.css";
 import { StoreContext } from "../../context/StoreContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Bag = () => {
   const { bagItems, recipes_list, removeFromBag } = useContext(StoreContext);
-
+  
   return (
     <div className="bag">
       <div className="bag-items">
@@ -24,13 +26,23 @@ const Bag = () => {
                   <img src={item.image} alt="" />
                   <p>{item.name}</p>
                   <p>{bagItems[item.id]}</p>
-                  <p>x</p>
+                  <FontAwesomeIcon
+                    onClick={() => removeFromBag(item.id - 1)}
+                    className="bag-items-remove"
+                    icon={faXmark}
+                  />
                 </div>
                 <hr />
               </div>
             );
           }
         })}
+      </div>
+      <div className="bag-bottom">
+        <p>
+          *If you put everything you want in the bag, click on the button below!
+        </p>
+        <button>proceed to checkout</button>
       </div>
     </div>
   );
