@@ -16,9 +16,9 @@ const Footer = () => {
     <div className="footer" id="contact">
       <div className="footer-up">
         <div className="footer-logo-container">
-        <a href="/">
-          <img src="/YT-LogoHD.png" className="footer-logo-img" height="32" />
-        </a>
+          <a href="/">
+            <img src="/YT-LogoHD.png" className="footer-logo-img" height="32" />
+          </a>
         </div>
         <div className="links-columns">
           <div className="column">

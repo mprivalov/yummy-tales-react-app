@@ -52,7 +52,7 @@ a36a53
   text-shadow: 0px 1px 2px #000000;
 }
 
-.header-content button {
+.header-content a {
   display: block;
   padding: 0.7rem 1rem;
   margin: 2rem;
@@ -64,16 +64,16 @@ a36a53
   font-weight: 700;
   letter-spacing: 2px;
   cursor: pointer;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
 
-.header-content button:focus {
+.header-content a:focus {
   border-color: #a36a53;
   background-color: #b17c5e;
   color: #301e1a;
 }
 
-.header-content button:hover {
+.header-content a:hover {
   border-color: #a36a53;
   background-color: #f9f6f3;
   color: #a36a53;

@@ -34,8 +34,15 @@ h4 - 2rem
   position: fixed;
   width: 100%;
   padding: 1rem 5vw;
-  background-color: #f9f6f3;
+  /* background-color: #f9f6f3; */
+  background-color: transparent;
   z-index: 1;
+  transition: all 0.5s ease;
+}
+
+.navbar.active {
+  border: none;
+  background-color: #f9f6f3;
 }
 
 .navbar .logo-container {
@@ -51,7 +58,7 @@ h4 - 2rem
   display: flex;
   gap: 1.5rem;
   color: #a36a53;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
 }
 
@@ -132,7 +139,7 @@ h4 - 2rem
   border-radius: 5px;
   top: -4px;
   right: -4px;
-  cursor: pointer;
+  transition: all 0.4s ease;
 }
 
 .hamburger {
@@ -159,7 +166,7 @@ h4 - 2rem
     align-items: center;
     gap: 0.5rem;
     position: absolute;
-    top: 3.5rem;
+    top: 3.4rem;
     left: 0;
     width: 100vw;
     padding: 1rem;
@@ -167,7 +174,7 @@ h4 - 2rem
     color: #a36a53;
     font-size: 1rem;
     text-transform: uppercase;
-    animation: slide-in .4s ease;
+    animation: slide-in 0.4s ease;
     z-index: 1;
   }
 

@@ -11,7 +11,7 @@ const RecipesDisplay = ({ category }) => {
       <h4>best recipes in that category</h4>
       <div className="recipes-display-list">
         {recipes_list.map((item, index) => {
-          if ((category === "All" || category === item.category)) {
+          if (category === "All" || category === item.category) {
             return (
               <RecipesItem
                 key={index}

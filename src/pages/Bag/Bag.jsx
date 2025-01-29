@@ -3,10 +3,13 @@ import "./Bag.css";
 import { StoreContext } from "../../context/StoreContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const Bag = () => {
   const { bagItems, recipes_list, removeFromBag } = useContext(StoreContext);
-  
+
+  const navigate = useNavigate();
+
   return (
     <div className="bag">
       <div className="bag-items">
@@ -21,16 +24,18 @@ const Bag = () => {
         {recipes_list.map((item, index) => {
           if (bagItems[item.id] > 0) {
             return (
-              <div>
+              <div key={item.id}>
                 <div className="bag-items-title bag-items-item">
                   <img src={item.image} alt="" />
                   <p>{item.name}</p>
                   <p>{bagItems[item.id]}</p>
-                  <FontAwesomeIcon
-                    onClick={() => removeFromBag(item.id - 1)}
-                    className="bag-items-remove"
-                    icon={faXmark}
-                  />
+                  <button>
+                    <FontAwesomeIcon
+                      onClick={() => removeFromBag(item.id - 1)}
+                      className="bag-items-remove"
+                      icon={faXmark}
+                    />
+                  </button>
                 </div>
                 <hr />
               </div>
@@ -39,10 +44,14 @@ const Bag = () => {
         })}
       </div>
       <div className="bag-bottom">
+        {/* <div className="bag-total">
+          <h3>Quantity off added recipes</h3>
+          <p>Total: {getTotalItemsAmount()}</p>
+        </div> */}
         <p>
           *If you put everything you want in the bag, click on the button below!
         </p>
-        <button>proceed to checkout</button>
+        <button onClick={() => navigate("/order")}>proceed to checkout</button>
       </div>
     </div>
   );

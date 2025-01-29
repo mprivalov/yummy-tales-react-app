@@ -58,8 +58,8 @@ export const categoryList = [
 export const recipes_list = [
   {
     id: "1",
-    name: "Breakfast 1",
-    image: breakfastImage,
+    name: "Omlete with cheese & tomatos",
+    image: 'https://images.services.kitchenstories.io/gxInWDQniM21aQiVgvnXmDrMnvo=/3840x0/filters:quality(85)/images.kitchenstories.io/communityImages/f4604e05f6a9eaca99afddd69e849005_c02485d4-0841-4de6-b152-69deb38693f2.jpg',
     description: "Breakfast description",
     category: "Breakfast",
   },
