@@ -77,7 +77,6 @@ const PlaceOrder = () => {
           />
           <input
             type="email"
-            pattern=".+@example\.com"
             placeholder="Email Address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -85,7 +84,6 @@ const PlaceOrder = () => {
           />
           <input
             type="tel"
-            pattern="[0-9]{3}"
             placeholder="2#######"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}

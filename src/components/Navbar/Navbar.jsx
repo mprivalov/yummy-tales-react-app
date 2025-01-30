@@ -84,7 +84,7 @@ const Navbar = ({ setShowLogin }) => {
           <span className={totalItems > 0 ? "dot" : ""}></span>
         </div>
         {/* <button className="signin">sign up</button> */}
-        <button className="signin" onClick={() => setShowLogin(true)}>
+        <button className="signin-btn" onClick={() => setShowLogin(true)}>
           login
         </button>
         <div className="hamburger" onClick={toggleMenu}>

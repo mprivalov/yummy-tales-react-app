@@ -52,7 +52,7 @@ a36a53
   text-shadow: 0px 1px 2px #000000;
 }
 
-.header-content a {
+.header-content .view-recipes-btn {
   display: block;
   padding: 0.7rem 1rem;
   margin: 2rem;
@@ -90,10 +90,18 @@ a36a53
 }
 @media (max-width: 768px) {
   .header-content h1 {
-    font-size: 5rem;
+    font-size: 4.1rem;
   }
 
   .header-content h4 {
     font-size: 1.2rem;
+  }
+
+  .header-content .view-recipes-btn {
+    padding: 0.5rem 0.7rem;
+    margin: 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
   }
 }

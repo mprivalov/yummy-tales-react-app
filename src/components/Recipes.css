@@ -37,10 +37,9 @@ a36a53
 .recipes-list {
   display: flex;
   justify-content: space-between;
-  justify-content: space-around;
   align-items: center;
   text-align: center;
-  gap: 1rem;
+  gap: 2rem;
   margin: 1rem 0;
   overflow-x: scroll;
 }
@@ -95,9 +94,15 @@ a36a53
 }
 
 @media (max-width: 768px) {
+  .recipes h3 {
+    padding: 0 5vw;
+  }
+
   .recipes {
-    padding: 3rem 5vw;
-    gap: 20px;
-    color: #301e1a;
+    padding: 3rem 0 1rem 0;
+  }
+
+  .recipes hr {
+    margin: 0 5vw;
   }
 }

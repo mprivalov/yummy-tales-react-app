@@ -11,7 +11,7 @@ const LoginPopup = ({ setShowLogin }) => {
     <div className="login-popup">
       <form action="" className="login-popup-container">
         <div className="login-popup-title">
-          <h2>{currState}</h2>
+          <h4>{currState}</h4>
           <FontAwesomeIcon
             onClick={() => setShowLogin(false)}
             icon={faXmark}
