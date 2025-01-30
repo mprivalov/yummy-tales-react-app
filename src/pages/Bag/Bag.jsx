@@ -26,16 +26,14 @@ const Bag = () => {
             return (
               <div key={item.id}>
                 <div className="bag-items-title bag-items-item">
-                  <img src={item.image} alt="" />
+                  <img src={item.image} alt={item.name} />
                   <p>{item.name}</p>
                   <p>{bagItems[item.id]}</p>
-                  <button>
-                    <FontAwesomeIcon
-                      onClick={() => removeFromBag(item.id - 1)}
-                      className="bag-items-remove"
-                      icon={faXmark}
-                    />
-                  </button>
+                  <FontAwesomeIcon
+                    onClick={() => removeFromBag(item.id - 1)}
+                    className="bag-items-remove"
+                    icon={faXmark}
+                  />
                 </div>
                 <hr />
               </div>
@@ -44,14 +42,17 @@ const Bag = () => {
         })}
       </div>
       <div className="bag-bottom">
-        {/* <div className="bag-total">
-          <h3>Quantity off added recipes</h3>
-          <p>Total: {getTotalItemsAmount()}</p>
-        </div> */}
-        <p>
-          *If you put everything you want in the bag, click on the button below!
-        </p>
-        <button onClick={() => navigate("/order")}>proceed to checkout</button>
+        {Object.values(bagItems).every((count) => count > 0) ? (
+          <>
+            <p>
+              *If you put everything you want in the bag, click on the button
+              below!
+            </p>
+            <button onClick={() => navigate("/order")}>
+              proceed to checkout
+            </button>
+          </>
+        ) : <p>your cart is empty, please put something to proceed your order.</p>}
       </div>
     </div>
   );

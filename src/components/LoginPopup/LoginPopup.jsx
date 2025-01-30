@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./LoginPopup.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 
 const LoginPopup = ({ setShowLogin }) => {
   const [currState, setCurrState] = useState("Login");
@@ -24,13 +25,13 @@ const LoginPopup = ({ setShowLogin }) => {
           <input type="email" placeholder="E-mail" required />
           <input type="password" placeholder="Password" required />
         </div>
-        <button type="button">
+        <button className="login-btn" type="button">
           {currState === "Sign Up" ? "Create account" : "Login"}
         </button>
-        <div className="login-popup-condition">
+        <label className="login-popup-condition">
           <input type="checkbox" required />
-          <p>I accept all terms & conditions </p>
-        </div>
+          <p className="checkmark">I accept all terms & conditions </p>
+        </label>
         {currState === "Login" ? (
           <p>
             Create a new account?{" "}
@@ -42,6 +43,17 @@ const LoginPopup = ({ setShowLogin }) => {
             <span onClick={() => setCurrState("Login")}>Login here</span>
           </p>
         )}
+        <hr/>
+        <div className="social-login">
+          <button className="google-btn">
+            <FontAwesomeIcon icon={faGoogle} />
+            <span>Login with Google</span>
+          </button>
+          <button className="facebook-btn">
+            <FontAwesomeIcon icon={faFacebook} />
+            <span>Login with Facebook</span>
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -1,7 +1,36 @@
 .order {
   width: 100%;
   padding: 6rem 5vw;
-  background-color: #ffffff;
+}
+
+.success-message {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  top: 4rem;
+  right: 1rem;
+  padding: 1rem;
+  border: 1px solid #a2a2a2;
+  border-radius: 1rem;
+  color: #03ac03;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.error-message {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  top: 4rem;
+  right: 1rem;
+  padding: 1rem;
+  border: 1px solid #a2a2a2;
+  border-radius: 1rem;
+  color: #a30000;
+  background-color: #fff;
+  z-index: 1;
 }
 
 .place-order {
@@ -22,6 +51,7 @@
 .order-left-side h4 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  text-transform: capitalize;
 }
 
 .order-left-side input {

@@ -1,7 +1,6 @@
 .bag {
   width: 100%;
   padding: 6rem 3rem;
-  background-color: #ffffff;
   animation: fadeIn 0.2s;
 }
 
@@ -10,7 +9,7 @@
   grid-template-columns: 1fr 1.5fr 1fr 0.5fr;
   align-items: center;
   justify-items: center;
-  color: gray;
+  color: #808080;
   font-size: 0.8rem;
 }
 
@@ -30,16 +29,15 @@
 }
 
 .bag-items-remove {
-  font-size: 0.5rem;
   color: #ff0000;
   background-color: #ff0000;
   padding: 0.5rem;
-  border-radius: 50%;
   cursor: pointer;
 }
 
 .bag-items-remove:hover {
-  color: black;
+  font-size: 1rem;
+  color: #000000;
 }
 
 .bag-bottom {

@@ -14,9 +14,14 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1.2rem;
+  padding: 1.5rem;
   border-radius: 1rem;
   background-color: #f2eae2;
+}
+
+.login-popup-container hr {
+  margin: 0.5rem;
+  opacity: 50%;
 }
 
 .login-popup-title {
@@ -29,7 +34,7 @@
   font-size: 1.3rem;
   color: #808080;
   cursor: pointer;
-  transition: all 0.2s linear;
+  transition: color .3s linear;
 }
 
 .login-popup-title .close-button:hover {
@@ -43,18 +48,44 @@
 }
 
 .login-popup-input input {
-  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 1.5rem;
   border-radius: 0.5rem;
   border: none;
   outline: none;
 }
 
-.login-popup-container button {
+.login-popup-input input[type="text"] {
+  background-color: #fff;
+  background-image: url("/user-solid.svg");
+  background-repeat: no-repeat;
+  background-size: 1cap;
+  background-position: 0.5rem;
+}
+
+.login-popup-input input[type="email"] {
+  background-color: #fff;
+  background-image: url("/envelope-solid.svg");
+  background-repeat: no-repeat;
+  background-size: 1cap;
+  background-position: 0.5rem;
+}
+
+.login-popup-input input[type="password"] {
+  background-color: #fff;
+  background-image: url("/lock-solid.svg");
+  background-repeat: no-repeat;
+  background-size: 1cap;
+  background-position: 0.5rem;
+}
+
+.login-popup-container .login-btn {
   border: none;
   display: block;
   justify-content: center;
   padding: 0.6rem 1rem;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   background-color: #5a3c34;
   color: #f9f6f3;
   text-transform: uppercase;
@@ -64,7 +95,7 @@
   transition: 0.4s linear;
 }
 
-.login-popup-container button:hover {
+.login-popup-container .login-btn:hover {
   background-color: #a36a53;
 }
 
@@ -72,11 +103,13 @@
   display: flex;
   gap: 0.5rem;
   margin-top: -0.5rem;
+  cursor: pointer;
 }
 
-.login-popup-condition input {
-  border: none;
-  outline: none;
+.login-popup-condition input[type="checkbox"] {
+  width: 1rem;
+  accent-color: #5a3c34;
+  cursor: pointer;
 }
 
 .login-popup p span {
@@ -88,4 +121,49 @@
 
 .login-popup p span:hover {
   color: #a36a53;
+}
+
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.google-btn,
+.facebook-btn {
+  display: block;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  color: #000000;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all .4s linear;
+}
+
+.google-btn span,
+.facebook-btn span {
+  margin-left: 0.25rem;
+}
+
+.google-btn:hover {
+  color: #fff;
+  background: #ea4335;
+  background: -webkit-linear-gradient(
+    -120deg,
+    #4285f4,
+    #34a853,
+    #fbbc05,
+    #ea4335
+  );
+  background: linear-gradient(-120deg, #4285f4, #34a853, #fbbc05, #ea4335);
+}
+
+.facebook-btn:hover {
+  color: #fff;
+  background: #00c6ff;
+  background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+  background: linear-gradient(to right, #0072ff, #00c6ff);
 }

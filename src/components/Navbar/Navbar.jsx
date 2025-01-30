@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBagShopping,
   faBars,
-  faL,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
@@ -14,12 +13,15 @@ const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
   const [isOpen, setIsOpen] = useState(false); // состояние для управления hamburger menu
   const [navbar, setNavbar] = useState(false);
+  const [navbarMobile, setNavbarMobile] = useState(false);
 
   const changeBackground = () => {
     if (window.scrollY >= window.innerHeight) {
       setNavbar(true);
+      setNavbarMobile(true);
     } else {
       setNavbar(false);
+      setNavbarMobile(false);
     }
   };
 
@@ -96,7 +98,7 @@ const Navbar = ({ setShowLogin }) => {
           />
         </div>
       </div>
-      <ul className={`mobile-navbar-menu ${isOpen ? "open" : ""}`}>
+      <ul className={navbarMobile ? `mobile-navbar-menu active ${isOpen ? "open" : ""}` : `mobile-navbar-menu ${isOpen ? "open" : ""}`}>
         <a
           href="#header"
           onClick={() => {

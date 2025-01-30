@@ -1,13 +1,18 @@
 import React, { useContext, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { send } from "emailjs-com";
 import "./PlaceOrder.css";
 import { StoreContext } from "../../context/StoreContext";
+import { faCheck, faExclamation } from "@fortawesome/free-solid-svg-icons";
 
 const PlaceOrder = () => {
   const { bagItems, recipes_list } = useContext(StoreContext);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [successMessage, setSuccessMessage] = useState(""); // Для успешного сообщения
+  const [errorMessage, setErrorMessage] = useState(""); //
 
   const handleOrderSubmit = (e) => {
     e.preventDefault();
@@ -20,6 +25,7 @@ const PlaceOrder = () => {
     const templateParams = {
       from_name: `${firstName} ${lastName}`,
       to_email: email,
+      phone: phone,
       message: orderDetails,
     };
 
@@ -31,11 +37,23 @@ const PlaceOrder = () => {
     )
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
-        // logic
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPhone("");
+        setSuccessMessage("Order successfully created!");
+        setErrorMessage("");
+        setTimeout(() => {
+          setSuccessMessage("");
+        }, 3000);
       })
       .catch((err) => {
         console.error("Failed to send email:", err);
-        // logic
+        setSuccessMessage("");
+        setErrorMessage("Failed to send order.");
+        setTimeout(() => {
+          setErrorMessage("");
+        }, 3000);
       });
   };
   return (
@@ -45,23 +63,32 @@ const PlaceOrder = () => {
           <h4>order information</h4>
           <input
             type="text"
-            placeholder="First name..."
+            placeholder="First Name"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             required
           />
           <input
             type="text"
-            placeholder="Last name..."
+            placeholder="Last Name"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             required
           />
           <input
             type="email"
-            placeholder="E-mail..."
+            pattern=".+@example\.com"
+            placeholder="Email Address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="tel"
+            pattern="[0-9]{3}"
+            placeholder="2#######"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
             required
           />
         </div>
@@ -84,6 +111,18 @@ const PlaceOrder = () => {
           <button type="submit">proceed to order</button>
         </div>
       </form>
+      {successMessage && (
+        <div className="success-message">
+          <FontAwesomeIcon icon={faCheck} />
+          {successMessage}
+        </div>
+      )}
+      {errorMessage && (
+        <div className="error-message">
+          <FontAwesomeIcon icon={faExclamation} />
+          {errorMessage}
+        </div>
+      )}
     </div>
   );
 };
